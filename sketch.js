@@ -73,9 +73,10 @@ function draw() {
   player.visible=false
   ObstaclesGroup.destroyEach()
   FoodGroup.destroyEach()
-  text("GAME OVER",200,200)
- 
-  text("Score:"+score,400,100)
+  fill("yellow")
+  text("GAME OVER",400,150) 
+  fill("blue")
+  text("Score:"+score,700,100)
   }
   
   
@@ -99,7 +100,7 @@ function spawnFood(){
 function spawnObstacles(){
   if(frameCount%190 ===0){
     var obstacles=createSprite(100,350,40,10)
-    obstacles.x=random(120,200)
+    obstacles.x=random(800,800)
     obstacles.addImage(obstacleImg)
     obstacles.scale=0.1
     obstacles.velocityX=-6
